@@ -14,10 +14,12 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping
-    public List<UserModel> getAllUsers() {
-        return userService.getAllUsers();
+    public List<UserModel> getAllUser(){
+        return userService.getAllUser();
     }
+
     @PostMapping
     public void registerUser(@RequestBody UserModel u) {
     userService.registerUser(u);
