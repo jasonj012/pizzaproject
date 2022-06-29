@@ -20,6 +20,12 @@ public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int userID;
-    String userName;
+    String username;
     String password;
+    private String email;
+    private Role role;
+
+        public enum Role{
+            User
+        }
 }
